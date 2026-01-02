@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Kaleb Nunes dos Santos</title>
+    <meta name="description" content="CV de Kaleb Nunes dos Santos - Consultor de Implantação, Redes, Monitoramento e Automação">
+    <meta name="author" content="Kaleb Nunes dos Santos">
+    <title>CV - Kaleb Nunes dos Santos | Consultor de Implantação</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
@@ -52,7 +54,12 @@
             border: 6px solid rgba(255,255,255,0.9);
             object-fit: cover;
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            background: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            font-weight: 700;
         }
         
         .header-info {
@@ -84,6 +91,17 @@
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
         }
         
         .contact-item::before {
@@ -127,6 +145,11 @@
             padding: 20px;
             border-radius: 10px;
             border-left: 5px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateX(5px);
         }
         
         .skill-title {
@@ -229,6 +252,12 @@
             padding: 25px;
             border-radius: 10px;
             border-left: 5px solid #764ba2;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
         
         .project-title {
@@ -261,6 +290,11 @@
             padding: 18px;
             border-radius: 8px;
             border-left: 4px solid #764ba2;
+            transition: transform 0.2s ease;
+        }
+        
+        .cert-card:hover {
+            transform: translateX(5px);
         }
         
         .cert-name {
@@ -272,32 +306,6 @@
         .cert-org {
             color: #7f8c8d;
             font-size: 0.9em;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .stat-label {
-            font-size: 0.95em;
-            opacity: 0.95;
         }
         
         .clients-section {
@@ -330,6 +338,11 @@
             border-radius: 8px;
             border-left: 4px solid #667eea;
             color: #555;
+            transition: transform 0.2s ease;
+        }
+        
+        .indicators-list li:hover {
+            transform: translateX(5px);
         }
         
         .indicators-list strong {
@@ -395,6 +408,15 @@
             font-size: 0.9em;
         }
         
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
         @media print {
             body {
                 background: white;
@@ -405,6 +427,12 @@
             }
             .section {
                 page-break-inside: avoid;
+            }
+            .project-card:hover,
+            .skill-category:hover,
+            .cert-card:hover,
+            .indicators-list li:hover {
+                transform: none;
             }
         }
         
@@ -419,6 +447,7 @@
             .photo {
                 width: 160px;
                 height: 160px;
+                font-size: 3em;
             }
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -429,51 +458,40 @@
             .header {
                 padding: 30px 20px;
             }
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- HEADER -->
-       <div class="header-content">
-
-    <div class="photo-container">
-        <img
-            class="photo"
-            src="./Kaleb-Corporativo-reduzido.jpg"
-            alt="Kaleb Nunes dos Santos">
-    </div>
-
-    <div class="header-info">
-        <h1 class="name">KALEB NUNES DOS SANTOS</h1>
-        <h2 class="title">Consultor de Implantação | Redes, Monitoramento e Automação</h2>
-
-        <div class="contact-grid">
-            <div class="contact-item">
-                📍 Balneário Camboriú, SC
-            </div>
-
-            <div class="contact-item">
-                📞 <a href="https://wa.me/5547988901616" target="_blank">
-                    +55 47 98890-1616
-                </a>
-            </div>
-
-            <div class="contact-item">
-                ✉️ <a href="mailto:kalebdossantos59924@gmail.com">
-                    kalebdossantos59924@gmail.com
-                </a>
-            </div>
-
-            <div class="contact-item">
-                💼 <a href="https://linkedin.com/in/kalebnunes" target="_blank">
-                    linkedin.com/in/kalebnunes
-                </a>
+        <div class="header">
+            <div class="header-content">
+                <div class="photo-container">
+                    <!-- Iniciais como placeholder - substitua pelo caminho da sua foto -->
+                    <div class="photo">KN</div>
+                </div>
+                <div class="header-info">
+                    <h1 class="name">KALEB NUNES DOS SANTOS</h1>
+                    <h2 class="title">Consultor de Implantação | Redes, Monitoramento e Automação</h2>
+                    <div class="contact-grid">
+                        <div class="contact-item">Balneário Camboriú, SC</div>
+                        <div class="contact-item">
+                            <a href="https://wa.me/5547988901616" target="_blank" rel="noopener">+55 47 98890-1616</a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="mailto:kalebdossantos59924@gmail.com">kalebdossantos59924@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://linkedin.com/in/kalebnunes" target="_blank" rel="noopener">linkedin.com/in/kalebnunes</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
         <!-- CONTENT -->
         <div class="content">
             <!-- PERFIL PROFISSIONAL -->
@@ -727,107 +745,4 @@
                         <div class="cert-name">Network Technician Career Path</div>
                         <div class="cert-org">Cisco - Jun/2024 a Jun/2025</div>
                     </div>
-                    <div class="cert-card">
-                        <div class="cert-name">Bootcamp CCNA</div>
-                        <div class="cert-org">Hackone/Cisco - Ago/2023</div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-name">Linux, Banco de Dados e Análise de Dados</div>
-                        <div class="cert-org">Workover Academy - Mai/2024</div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-name">Shell Script: Do Básico ao Profissional</div>
-                        <div class="cert-org">Udemy - Dez/2025</div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-name">Ensino Superior (Trancado)</div>
-                        <div class="cert-org">Cruzeiro do Sul (EAD) - Fev/2022 a Mar/2023</div>
-                    </div>
-                </div>
-                <div style="margin-top: 25px;">
-                    <strong>Idiomas:</strong> Português (Nativo) • Espanhol (Avançado) • Inglês (Iniciante - A1)
-                </div>
-            </section>
-
-            <!-- CLIENTES ENTERPRISE -->
-            <section class="section">
-                <h2 class="section-title">Clientes Enterprise Atendidos</h2>
-                <div class="clients-section">
-                    <div class="clients-title">Setores</div>
-                    <div class="clients-list">
-                        <strong>Financeiro:</strong> Bradesco (via MJV), Itaú • <strong>Varejo:</strong> Iguatemi • <strong>Indústria:</strong> BRF, Electrolux • <strong>Automotivo:</strong> Audi México • <strong>Mineração:</strong> Bauminas • <strong>Telecom/ISP:</strong> VivaTech, MetroNetwork, Operadora Vetorial, RR64, 30+ clientes via NOC
-                    </div>
-                </div>
-            </section>
-
-            <!-- INDICADORES DE PERFORMANCE -->
-            <section class="section">
-                <h2 class="section-title">Indicadores de Performance</h2>
-                <ul class="indicators-list">
-                    <li><strong>Consultor de Implantação:</strong> 7+ clientes enterprise | 100% de taxa de sucesso | 40% de redução em tempo de deploy | Promoção em 2 meses</li>
-                    <li><strong>Consultor Técnico MJV/Bradesco:</strong> Manipulação de dados sensíveis | Compliance mantido | Análises críticas entregues</li>
-                    <li><strong>Master Network Technician:</strong> 99%+ de disponibilidade mantida | 100% de SLA em incidentes críticos | Promoção de Senior para Master</li>
-                    <li><strong>Analista NOC:</strong> 1.000+ incidentes gerenciados | SLA acima de 99% | Resolução proativa reconhecida</li>
-                    <li><strong>Responsável Técnico VivaTech:</strong> 3 anos de atuação remota PJ | Estabilidade reconhecida via carta de recomendação</li>
-                    <li><strong>Técnico de Redes:</strong> 500+ ordens de serviço executadas | 85% de resolução no primeiro atendimento | 200+ clientes atendidos</li>
-                </ul>
-            </section>
-
-            <!-- DIFERENCIAIS -->
-            <section class="section">
-                <h2 class="section-title">Diferenciais</h2>
-                <ul class="highlights-list">
-                    <li>Certificação Fortinet FCF (Network Security Expert) comprovando expertise em segurança de redes</li>
-                    <li>Experiência em ambientes críticos NOC 24x7 com empresas enterprise e multinacionais</li>
-                    <li>Perfil multidisciplinar: redes, monitoramento, automação, consultoria e suporte N2</li>
-                    <li>Trilíngue: português nativo, espanhol avançado, inglês em desenvolvimento</li>
-                    <li>Histórico de promoções consecutivas: Técnico → Analista → Senior → Master → Consultor</li>
-                    <li>Foco em resultados: automação, padronização, melhoria contínua e satisfação de clientes</li>
-                    <li>Carta de recomendação formal da VivaTech destacando excelência técnica e comprometimento</li>
-                </ul>
-            </section>
-
-            <!-- OBJETIVO -->
-            <section class="section">
-                <h2 class="section-title">Objetivo</h2>
-                <p style="margin-bottom: 15px; color: #555; line-height: 1.8;">
-                    <strong>Posições em:</strong> Consultor de Implantação Senior/Tech Lead • Network Engineer/Arquiteto • Especialista em Automação • SRE • Coordenador NOC/Infraestrutura
-                </p>
-                <p style="color: #555; line-height: 1.8;">
-                    <strong>Disponibilidade:</strong> Imediata | <strong>Modalidade:</strong> Presencial, Híbrido ou Remoto
-                </p>
-            </section>
-
-            <!-- REFERÊNCIAS PROFISSIONAIS -->
-            <section class="section">
-                <h2 class="section-title">Referências Profissionais</h2>
-                <div class="references-section">
-                    <div class="reference-item">
-                        <div class="ref-name">Rôney Cordeiro</div>
-                        <div class="ref-info">
-                            CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
-                            <em>Recomendação formal disponível | Período: 2022-2025</em>
-                        </div>
-                    </div>
-                    <div class="reference-item">
-                        <div class="ref-name">Lucas Costa</div>
-                        <div class="ref-info">
-                            MetroNetwork<br>
-                            <em>Disponível mediante solicitação</em>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- FOOTER -->
-        <div class="footer">
-            Portfólio completo disponível em: linkedin.com/in/kalebnunes | GitHub (em construção)
-        </div>
-    </div>
-</body>
-</html>
-
-
-
-
+                    <div class="cert
