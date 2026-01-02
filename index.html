@@ -1,12 +1,14 @@
-Aqui está o código completo e atualizado.
+Com base nas imagens que você enviou e no código que você colou, entendi exatamente o que você quer. Você quer o layout moderno com o cabeçalho roxo/azul, mas **substituindo o círculo com as iniciais "KN" pela sua foto**.
 
-**O que foi alterado:**
+Eu não consigo abrir o arquivo do seu computador (`file:///C:/...`), mas **já reconstruí o código completo abaixo** usando o texto que você mandou e corrigindo a parte da imagem.
 
-1. **HTML:** A `div` com as iniciais "KN" foi substituída pela tag `<img>` apontando para o arquivo **`Kaleb-Corporativo-reduzido.png`**.
-2. **CSS:** A classe `.photo` foi ajustada para suportar a imagem (removi as configurações de texto e adicionei `object-fit: cover` e `object-position: center top` para garantir que seu rosto fique centralizado no círculo).
-3. **Fechamento:** Como o seu código cortou no final da mensagem anterior, completei as tags de fechamento (`body`, `html`, etc.) para garantir que o arquivo funcione corretamente.
+**O que eu fiz:**
 
-Basta copiar tudo abaixo e substituir no seu arquivo `index.html` no GitHub:
+1. **Inseri a foto:** Troquei a `div` de texto pela tag `<img src="Kaleb-Corporativo-reduzido.png">`.
+2. **Ajustei o CSS da foto:** Removi as configurações de texto (alinhamento, tamanho da fonte) e garanti que a imagem preencha o círculo perfeitamente sem distorcer (`object-fit: cover`).
+3. **Corrigi o final do arquivo:** O código que você colou estava cortado no final. Eu fechei todas as tags corretamente (`</div>`, `</body>`, `</html>`).
+
+Basta **copiar o código abaixo inteiro** e colar no seu `index.html` no VS Code ou GitHub:
 
 ```html
 <!DOCTYPE html>
@@ -58,16 +60,16 @@ Basta copiar tudo abaixo e substituir no seu arquivo `index.html` no GitHub:
             flex-shrink: 0;
         }
         
-        /* ATUALIZADO PARA IMAGEM */
+        /* CSS CORRIGIDO PARA FOTO */
         .photo {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             border: 6px solid rgba(255,255,255,0.9);
-            object-fit: cover; /* Ajusta a imagem ao círculo */
-            object-position: center top; /* Foca no rosto */
+            object-fit: cover; /* Garante que a foto não distorça */
+            object-position: center top; /* Centraliza no rosto */
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            background: #fff;
+            background: #fff; /* Fundo branco por segurança */
             display: block;
         }
         
@@ -745,12 +747,96 @@ Basta copiar tudo abaixo e substituir no seu arquivo `index.html` no GitHub:
                         <div class="cert-name">Network Technician Career Path</div>
                         <div class="cert-org">Cisco - Jun/2024 a Jun/2025</div>
                     </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Bootcamp CCNA</div>
+                        <div class="cert-org">Hackone/Cisco - Ago/2023</div>
                     </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Linux, Banco de Dados e Análise de Dados</div>
+                        <div class="cert-org">Workover Academy - Mai/2024</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Shell Script: Do Básico ao Profissional</div>
+                        <div class="cert-org">Udemy - Dez/2025</div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-name">Ensino Superior (Trancado)</div>
+                        <div class="cert-org">Cruzeiro do Sul (EAD) - Fev/2022 a Mar/2023</div>
+                    </div>
+                </div>
+                <div style="margin-top: 25px;">
+                    <strong>Idiomas:</strong> Português (Nativo) • Espanhol (Avançado) • Inglês (Iniciante - A1)
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Clientes Enterprise Atendidos</h2>
+                <div class="clients-section">
+                    <div class="clients-title">Setores</div>
+                    <div class="clients-list">
+                        <strong>Financeiro:</strong> Bradesco (via MJV), Itaú • <strong>Varejo:</strong> Iguatemi • <strong>Indústria:</strong> BRF, Electrolux • <strong>Automotivo:</strong> Audi México • <strong>Mineração:</strong> Bauminas • <strong>Telecom/ISP:</strong> VivaTech, MetroNetwork, Operadora Vetorial, RR64, 30+ clientes via NOC
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Indicadores de Performance</h2>
+                <ul class="indicators-list">
+                    <li><strong>Consultor de Implantação:</strong> 7+ clientes enterprise | 100% de taxa de sucesso | 40% de redução em tempo de deploy | Promoção em 2 meses</li>
+                    <li><strong>Consultor Técnico MJV/Bradesco:</strong> Manipulação de dados sensíveis | Compliance mantido | Análises críticas entregues</li>
+                    <li><strong>Master Network Technician:</strong> 99%+ de disponibilidade mantida | 100% de SLA em incidentes críticos | Promoção de Senior para Master</li>
+                    <li><strong>Analista NOC:</strong> 1.000+ incidentes gerenciados | SLA acima de 99% | Resolução proativa reconhecida</li>
+                    <li><strong>Responsável Técnico VivaTech:</strong> 3 anos de atuação remota PJ | Estabilidade reconhecida via carta de recomendação</li>
+                    <li><strong>Técnico de Redes:</strong> 500+ ordens de serviço executadas | 85% de resolução no primeiro atendimento | 200+ clientes atendidos</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Diferenciais</h2>
+                <ul class="highlights-list">
+                    <li>Certificação Fortinet FCF (Network Security Expert) comprovando expertise em segurança de redes</li>
+                    <li>Experiência em ambientes críticos NOC 24x7 com empresas enterprise e multinacionais</li>
+                    <li>Perfil multidisciplinar: redes, monitoramento, automação, consultoria e suporte N2</li>
+                    <li>Trilíngue: português nativo, espanhol avançado, inglês em desenvolvimento</li>
+                    <li>Histórico de promoções consecutivas: Técnico → Analista → Senior → Master → Consultor</li>
+                    <li>Foco em resultados: automação, padronização, melhoria contínua e satisfação de clientes</li>
+                    <li>Carta de recomendação formal da VivaTech destacando excelência técnica e comprometimento</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Objetivo</h2>
+                <p style="margin-bottom: 15px; color: #555; line-height: 1.8;">
+                    <strong>Posições em:</strong> Consultor de Implantação Senior/Tech Lead • Network Engineer/Arquiteto • Especialista em Automação • SRE • Coordenador NOC/Infraestrutura
+                </p>
+                <p style="color: #555; line-height: 1.8;">
+                    <strong>Disponibilidade:</strong> Imediata | <strong>Modalidade:</strong> Presencial, Híbrido ou Remoto
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Referências Profissionais</h2>
+                <div class="references-section">
+                    <div class="reference-item">
+                        <div class="ref-name">Rôney Cordeiro</div>
+                        <div class="ref-info">
+                            CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
+                            <em>Recomendação formal disponível | Período: 2022-2025</em>
+                        </div>
+                    </div>
+                    <div class="reference-item">
+                        <div class="ref-name">Lucas Costa</div>
+                        <div class="ref-info">
+                            MetroNetwork<br>
+                            <em>Disponível mediante solicitação</em>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         
         <div class="footer">
-            &copy; 2025 Kaleb Nunes dos Santos. Desenvolvido para portfólio profissional.
+            &copy; 2026 Kaleb Nunes dos Santos. Desenvolvido para portfólio profissional.
         </div>
     </div>
 </body>
