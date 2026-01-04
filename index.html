@@ -1,367 +1,157 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CV Profissional – Kaleb Nunes dos Santos | Redes, Monitoramento, Automação e Implantação ITSM">
-<meta name="author" content="Kaleb Nunes dos Santos">
-<title>Kaleb Nunes dos Santos | CV Profissional</title>
+<title>Kaleb Nunes dos Santos | Portfólio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="assets/print.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-    font-family:'Inter','Segoe UI',sans-serif;
-    background:#ecf0f1;
-    color:#1f2933;
-    line-height:1.6
+body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
+body.dark{background:#020617;color:#e5e7eb}
+
+.navbar{
+position:fixed;top:0;width:100%;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+display:flex;justify-content:center;gap:30px;
+padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
 }
-.container{
-    max-width:1100px;
-    margin:30px auto;
-    background:#fff;
-    box-shadow:0 20px 50px rgba(0,0,0,.12)
+body.dark .navbar{background:#020617}
+
+.navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
+body.dark .navbar a{color:#93c5fd}
+
+.lang-switch{position:fixed;top:15px;right:30px;font-weight:600;z-index:1000}
+.lang-switch a{color:#1e3a8a;text-decoration:none;margin-left:8px}
+body.dark .lang-switch a{color:#93c5fd}
+
+#darkToggle{
+position:fixed;top:15px;left:30px;
+background:#1e3a8a;color:#fff;border:none;
+padding:8px 14px;border-radius:20px;
+font-weight:600;cursor:pointer;z-index:1000
 }
 
-/* HEADER */
-.header{
-    background:linear-gradient(135deg,#1e3a8a,#2563eb);
-    color:#fff;
-    padding:55px 45px
-}
-.header-content{
-    display:flex;
-    gap:45px;
-    align-items:center
-}
-.photo{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    border:6px solid rgba(255,255,255,.9);
-    object-fit:cover
-}
-.name{
-    font-size:2.8em;
-    font-weight:700;
-    letter-spacing:-1px
-}
-.title{
-    font-size:1.3em;
-    margin:10px 0 22px;
-    opacity:.95
-}
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    font-size:.95em
-}
-.contact-grid a{color:#fff;text-decoration:none}
+.container{max-width:1100px;margin:auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.1)}
+body.dark .container{background:#020617}
 
-/* CONTENT */
-.content{padding:55px 45px}
-.section{margin-bottom:55px}
+.header{background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:#fff;padding:50px}
+.header-content{display:flex;gap:40px;align-items:center}
+.photo{width:180px;height:180px;border-radius:50%;border:5px solid #fff;object-fit:cover}
+
+.btn-download{
+display:inline-flex;align-items:center;gap:10px;
+background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+color:#fff;padding:12px 28px;border-radius:30px;
+font-weight:700;text-decoration:none;transition:.3s
+}
+.btn-download:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(59,130,246,.45)}
+
+.section{padding:50px}
 .section-title{
-    font-size:1.55em;
-    color:#1e3a8a;
-    margin-bottom:28px;
-    padding-left:14px;
-    border-left:5px solid #1e3a8a;
-    background:linear-gradient(to right,rgba(37,99,235,.12),transparent)
+font-size:1.5em;font-weight:700;color:#1e3a8a;
+margin-bottom:25px;position:relative;padding-bottom:10px
 }
+.section-title:after{
+content:"";width:60px;height:4px;background:#3b82f6;
+position:absolute;bottom:0;left:0;border-radius:2px
+}
+body.dark .section-title{color:#93c5fd}
 
-/* PROJECTS */
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:28px
+.highlight-box{
+background:linear-gradient(135deg,#eff6ff,#fff);
+border-radius:12px;padding:20px 25px;
+margin-top:25px;display:flex;gap:18px;
+box-shadow:inset 0 0 0 1px #dbeafe
 }
-.project-box{
-    border:1px solid #e5edff;
-    border-radius:16px;
-    padding:30px;
-    box-shadow:0 12px 30px rgba(0,0,0,.07)
-}
-.project-title{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:1.2em;
-    font-weight:700;
-    color:#1e3a8a;
-    margin-bottom:12px
-}
-.project-desc{color:#475569;margin-bottom:12px}
-.project-box ul{
-    padding-left:18px;
-    color:#475569;
-    font-size:.95em
-}
-.project-tags{
-    margin-top:18px;
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap
-}
-.project-tags span{
-    background:#eff6ff;
-    color:#1e40af;
-    border:1px solid #dbeafe;
-    padding:6px 12px;
-    border-radius:6px;
-    font-size:.75em;
-    font-weight:700
-}
+.highlight-box span{font-size:2em;font-weight:800;color:#1e3a8a}
+body.dark .highlight-box{background:#020617;box-shadow:0 0 0 1px #1e293b}
 
-/* EXPERIENCE */
-.experience-item{
-    margin-bottom:35px;
-    padding-bottom:35px;
-    border-bottom:1px solid #e2e8f0
-}
-.exp-role{
-    font-size:1.25em;
-    font-weight:700;
-    color:#1e3a8a
-}
-.exp-company{
-    font-weight:600;
-    color:#2563eb
-}
-.exp-results{
-    background:#f0f9ff;
-    padding:14px;
-    border-left:4px solid #2563eb;
-    border-radius:8px;
-    margin-top:12px
-}
-
-/* CHARTS */
-.charts{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:35px
-}
-.chart-box{
-    background:#fff;
-    border:1px solid #e5edff;
-    border-radius:16px;
-    padding:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,.06)
-}
-
-/* FOOTER */
-.footer{
-    background:#f8fafc;
-    padding:40px;
-    text-align:center;
-    color:#64748b;
-    font-size:.9em
-}
-
-@media(max-width:768px){
-    .header-content{flex-direction:column;text-align:center}
-    .contact-grid{grid-template-columns:1fr}
-}
+.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280;font-size:.85em}
+body.dark .footer{background:#020617;color:#94a3b8}
 </style>
 </head>
 
 <body>
+
+<button id="darkToggle">🌙 Dark</button>
+
+<nav class="navbar">
+<a href="#perfil">Perfil</a>
+<a href="#projetos">Projetos</a>
+<a href="#competencias">Competências</a>
+<a href="#experiencia">Experiência</a>
+</nav>
+
+<div class="lang-switch">
+<a href="index.html">PT</a> |
+<a href="index-en.html">EN</a> |
+<a href="index-es.html">ES</a>
+</div>
+
 <div class="container">
 
-<!-- HEADER -->
-<div class="header">
+<header class="header">
 <div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
+<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes">
 <div>
-<h1 class="name">KALEB NUNES DOS SANTOS</h1>
-<h2 class="title">Redes • Monitoramento • Automação • Implantação ITSM</h2>
-<div class="contact-grid">
-<div><i class="fas fa-map-marker-alt"></i> Balneário Camboriú – SC</div>
-<div><i class="fas fa-phone"></i> <a href="https://wa.me/5547988901616">+55 47 98890-1616</a></div>
-<div><i class="fas fa-envelope"></i> <a href="mailto:kalebdossantos59924@gmail.com">kalebdossantos59924@gmail.com</a></div>
-<div><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/kalebnunes">linkedin.com/in/kalebnunes</a></div>
+<h1>KALEB NUNES DOS SANTOS</h1>
+<h2>Consultor de Implantação | Redes e Automação</h2>
+<a href="assets/Kaleb-Nunes-CV.pdf" class="btn-download" target="_blank">
+<i class="fas fa-download"></i> Download CV
+</a>
 </div>
 </div>
-</div>
-</div>
+</header>
 
-<div class="content">
-
-<!-- PERFIL -->
-<section class="section">
+<section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
-<p>
-Profissional de Tecnologia da Informação com mais de <strong>6 anos de experiência</strong>
-em ambientes NOC, redes corporativas e projetos de implantação enterprise.
-Atuação sólida em <strong>monitoramento, automação, observabilidade e ITSM</strong>,
-com foco em eficiência operacional, governança, redução de incidentes
-e padronização de processos em ambientes críticos.
-</p>
+<p>Especialista em implantação, automação e observabilidade em ambientes enterprise.</p>
+<div class="highlight-box"><span>40%</span> redução no tempo de implantação</div>
 </section>
 
-<!-- CASE -->
-<section class="section">
-<h2 class="section-title">Projetos de Implantação – Case Resumido</h2>
-<div class="experience-item">
-<div class="exp-role">Implantação de Plataforma ITSM – Ambiente Enterprise</div>
-<div class="exp-company">Setor Corporativo / Industrial</div>
+<section id="projetos" class="section">
+<h2 class="section-title">Projetos</h2>
 <ul>
-<li>Implantação completa da plataforma Ellevo Next.</li>
-<li>Configuração de catálogo de serviços, SLAs, fluxos de Incidentes, Requisições e Mudanças.</li>
-<li>Estruturação de base de conhecimento e inventário de ativos.</li>
-<li>Treinamento de usuários, homologação técnica e Go-Live.</li>
+<li>Automação SaaS com PowerShell e API REST</li>
+<li>Observabilidade NOC com Zabbix e Grafana</li>
 </ul>
-<div class="exp-results">
-<strong>Resultado:</strong> Aumento da governança operacional, padronização de processos
-e redução significativa de retrabalho e tempo médio de atendimento.
-</div>
-</div>
 </section>
 
-<!-- PROJETOS -->
-<section class="section">
-<h2 class="section-title">Projetos & Soluções</h2>
-<div class="projects-grid">
-
-<div class="project-box">
-<div class="project-title"><i class="fas fa-microchip"></i> Automação de Implantação SaaS</div>
-<p class="project-desc">Automação de setups, integrações e configurações.</p>
-<ul>
-<li>Redução drástica de esforço manual.</li>
-<li>Padronização e confiabilidade dos ambientes.</li>
-</ul>
-<div class="project-tags">
-<span>PowerShell</span><span>API REST</span><span>SQL Server</span>
-</div>
-</div>
-
-<div class="project-box">
-<div class="project-title"><i class="fas fa-satellite-dish"></i> Observabilidade & NOC</div>
-<p class="project-desc">Monitoramento proativo e dashboards executivos.</p>
-<ul>
-<li>Ambientes críticos e alta disponibilidade.</li>
-<li>Redução de MTTR e incidentes recorrentes.</li>
-</ul>
-<div class="project-tags">
-<span>Zabbix</span><span>Grafana</span><span>PRTG</span>
-</div>
-</div>
-
-<div class="project-box">
-<div class="project-title"><i class="fas fa-user-shield"></i> Compliance & Dados</div>
-<p class="project-desc">Projetos com foco em segurança e LGPD.</p>
-<ul>
-<li>Tratamento seguro de dados.</li>
-<li>Relatórios gerenciais estratégicos.</li>
-</ul>
-<div class="project-tags">
-<span>LGPD</span><span>ETL</span><span>SQL</span>
-</div>
-</div>
-
-</div>
+<section id="competencias" class="section">
+<h2 class="section-title">Competências</h2>
+<p>PowerShell • Zabbix • Grafana • Fortinet • SQL • API REST</p>
 </section>
 
-<!-- EXPERIÊNCIA -->
-<section class="section">
-<h2 class="section-title">Experiência Profissional</h2>
-
-<div class="experience-item">
-<div class="exp-role">Consultor de Implantação</div>
-<div class="exp-company">Ellevo Software</div>
-<p><em>Ago/2025 – Atual</em></p>
-<ul>
-<li>Implantação e consultoria ITSM para clientes enterprise.</li>
-<li>Automação e integrações via API.</li>
-<li>Atuação consultiva em governança e processos.</li>
-</ul>
-</div>
-
-<div class="experience-item">
-<div class="exp-role">Master Network Technician</div>
-<div class="exp-company">RR64 – Network Intelligence</div>
-<p><em>2023 – 2025</em></p>
-<ul>
-<li>Ambientes críticos, backbone e redes corporativas.</li>
-<li>Troubleshooting avançado e SLA.</li>
-</ul>
-</div>
-
-<div class="experience-item">
-<div class="exp-role">Analista NOC N1 / N2</div>
-<div class="exp-company">MetroNetwork</div>
-<p><em>2022 – 2023</em></p>
-<ul>
-<li>Monitoramento 24x7 e resposta a incidentes.</li>
-<li>Ferramentas: Zabbix, Grafana, LibreNMS.</li>
-</ul>
-</div>
-
-<div class="experience-item">
-<div class="exp-role">Técnico de Redes</div>
-<div class="exp-company">Operadora Vetorial</div>
-<p><em>2019 – 2020</em></p>
-<ul>
-<li>Infraestrutura de redes corporativas.</li>
-</ul>
-</div>
+<section id="experiencia" class="section">
+<h2 class="section-title">Experiência</h2>
+<div class="highlight-box"><span>Promoção</span> em 2 meses na Ellevo</div>
 </section>
 
-<!-- INDICADORES -->
-<section class="section">
-<h2 class="section-title">Indicadores Profissionais</h2>
-<div class="charts">
-<div class="chart-box">
-<h3>Nível Técnico por Domínio</h3>
-<canvas id="skillsChart"></canvas>
-</div>
-<div class="chart-box">
-<h3>Distribuição da Experiência</h3>
-<canvas id="experienceChart"></canvas>
-</div>
-</div>
-</section>
-
-<!-- CARTA -->
 <section class="section" style="text-align:center">
-<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank"
-style="background:#1e3a8a;color:#fff;padding:14px 30px;
-border-radius:10px;text-decoration:none;font-weight:600">
-<i class="fas fa-file-signature"></i> Carta de Recomendação Técnica – VivaTech
+<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
+<i class="fas fa-file-signature"></i> Carta de Recomendação VivaTech
 </a>
 </section>
 
-</div>
-
-<div class="footer">
-© 2026 Kaleb Nunes dos Santos • CV Profissional
-</div>
+<footer class="footer">
+© 2026 Kaleb Nunes dos Santos • Todos os direitos reservados
+</footer>
 
 </div>
 
 <script>
-new Chart(document.getElementById('skillsChart'),{
-type:'bar',
-data:{
-labels:['Redes','Monitoramento','Automação','ITSM','Segurança'],
-datasets:[{data:[90,95,85,80,75]}]
-},
-options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:100}}}
-});
-
-new Chart(document.getElementById('experienceChart'),{
-type:'doughnut',
-data:{
-labels:['NOC','Implantação','Automação','Redes'],
-datasets:[{data:[30,25,20,25]}]
-},
-options:{plugins:{legend:{position:'bottom'}}}
-});
+const toggle=document.getElementById("darkToggle");
+toggle.onclick=()=>{
+document.body.classList.toggle("dark");
+toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
+};
 </script>
 
 </body>
