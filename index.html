@@ -6,8 +6,9 @@
     <meta name="description" content="CV de Kaleb Nunes dos Santos - Redes, Monitoramento e Automação">
     <meta name="author" content="Kaleb Nunes dos Santos">
     <title>Kaleb Nunes dos Santos | CV - Redes, Monitoramento e Automação</title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -43,17 +44,8 @@
             object-fit:cover;
             box-shadow:0 8px 30px rgba(0,0,0,.3)
         }
-        .name{
-            font-size:2.8em;
-            font-weight:700;
-            letter-spacing:-1px
-        }
-        .title{
-            font-size:1.3em;
-            margin:10px 0 20px;
-            font-weight:400;
-            opacity:.95
-        }
+        .name{font-size:2.8em;font-weight:700}
+        .title{font-size:1.3em;margin:10px 0 20px}
         .contact-grid{
             display:grid;
             grid-template-columns:repeat(2,1fr);
@@ -73,7 +65,19 @@
             font-size:1.5em
         }
 
-        /* ===== PROJETOS & SOLUÇÕES ===== */
+        .charts{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px
+        }
+        .chart-box{
+            background:#fff;
+            padding:20px;
+            border-radius:12px;
+            border:1px solid #e5edff;
+            box-shadow:0 8px 20px rgba(0,0,0,.06)
+        }
+
         .projects-grid{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -85,13 +89,8 @@
             padding:28px;
             border:1px solid #e5edff;
             box-shadow:0 10px 25px rgba(0,0,0,.06);
-            transition:.3s;
             display:flex;
             flex-direction:column
-        }
-        .project-box:hover{
-            transform:translateY(-6px);
-            box-shadow:0 18px 40px rgba(0,0,0,.12)
         }
         .project-title{
             display:flex;
@@ -102,16 +101,7 @@
             color:#1e3a8a;
             margin-bottom:12px
         }
-        .project-desc{
-            color:#475569;
-            font-size:.95em;
-            margin-bottom:12px
-        }
-        .project-box ul{
-            padding-left:18px;
-            font-size:.9em;
-            color:#475569
-        }
+        .project-desc{color:#475569;font-size:.95em;margin-bottom:12px}
         .project-tags{
             margin-top:auto;
             display:flex;
@@ -128,7 +118,6 @@
             border:1px solid #dbeafe
         }
 
-        /* ===== EXPERIÊNCIA ===== */
         .experience-item{
             margin-bottom:30px;
             padding-bottom:30px;
@@ -136,13 +125,6 @@
         }
         .exp-role{font-weight:700;font-size:1.2em;color:#1e3a8a}
         .exp-company{color:#3b82f6;font-weight:600}
-        .exp-results{
-            background:#f0f9ff;
-            padding:12px;
-            border-radius:6px;
-            margin-top:10px;
-            border-left:3px solid #3b82f6
-        }
 
         .footer{
             text-align:center;
@@ -167,7 +149,7 @@
             <img src="assets/Mídia%20(2).jpg" alt="Kaleb Nunes" class="photo">
             <div>
                 <h1 class="name">KALEB NUNES DOS SANTOS</h1>
-                <h2 class="title"> Redes | Monitoramento e Automação</h2>
+                <h2 class="title">Redes | Monitoramento e Automação</h2>
                 <div class="contact-grid">
                     <div><i class="fas fa-map-marker-alt"></i> Balneário Camboriú, SC</div>
                     <div><i class="fas fa-phone"></i> <a href="https://wa.me/5547988901616">+55 47 98890-1616</a></div>
@@ -181,26 +163,32 @@
     <div class="content">
 
         <section class="section">
-            <h2 class="section-title">Perfil Profissional</h2>
+            <h2 class="section-title">Indicadores Profissionais</h2>
+            <div class="charts">
+                <div class="chart-box">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="experienceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Projetos de Implantação (Case Resumido)</h2>
             <p>
-                Profissional de Redes, Monitoramento e Automação com <strong>6+ anos de experiência</strong> em ambientes NOC e enterprise.
-                Atuação em clientes como <strong>Iguatemi, BRF, Bradesco e Audi México</strong>, com foco em implantação,
-                observabilidade e automação, reduzindo em até <strong>40% o tempo de entrega</strong>.
+                Implantação de plataforma ITSM em ambiente enterprise, seguindo boas práticas de governança,
+                segurança da informação e conformidade com LGPD.
             </p>
         </section>
 
         <section class="section">
             <h2 class="section-title">Projetos & Soluções</h2>
-
             <div class="projects-grid">
 
                 <div class="project-box">
                     <div class="project-title"><i class="fas fa-microchip"></i> Automação de Implantação SaaS</div>
-                    <p class="project-desc">Otimização do setup Ellevo via PowerShell e APIs REST.</p>
-                    <ul>
-                        <li>Redução de setup manual de 8h para 2h.</li>
-                        <li>Eliminação total de erros de configuração.</li>
-                    </ul>
+                    <p class="project-desc">Automação de setups e integrações via PowerShell e APIs REST.</p>
                     <div class="project-tags">
                         <span>PowerShell</span><span>API REST</span><span>SQL Server</span>
                     </div>
@@ -208,72 +196,20 @@
 
                 <div class="project-box">
                     <div class="project-title"><i class="fas fa-satellite-dish"></i> Observabilidade & NOC</div>
-                    <p class="project-desc">Dashboards estratégicos de alta disponibilidade.</p>
-                    <ul>
-                        <li>Monitoramento de 30+ clientes ISP.</li>
-                        <li>Redução de 30% no MTTR.</li>
-                    </ul>
+                    <p class="project-desc">Dashboards estratégicos e monitoramento proativo.</p>
                     <div class="project-tags">
                         <span>Zabbix</span><span>Grafana</span><span>Fortinet</span>
                     </div>
                 </div>
 
                 <div class="project-box">
-                    <div class="project-title"><i class="fas fa-user-shield"></i> Compliance & Data Analytics</div>
-                    <p class="project-desc">Consultoria para o Banco Bradesco (via MJV).</p>
-                    <ul>
-                        <li>Manipulação de dados sensíveis.</li>
-                        <li>Relatórios gerenciais críticos.</li>
-                    </ul>
+                    <div class="project-title"><i class="fas fa-user-shield"></i> Compliance & Analytics</div>
+                    <p class="project-desc">Projetos orientados a dados e conformidade.</p>
                     <div class="project-tags">
-                        <span>SQL Server</span><span>ETL</span><span>Compliance</span><span>LGPD</span>
+                        <span>LGPD</span><span>SQL</span><span>ETL</span>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Experiência Profissional</h2>
-
-            <div class="experience-item">
-                <div class="exp-role">Consultor de Implantação</div>
-                <div class="exp-company">Ellevo Software</div>
-                <p><em>Ago/2025 – Atual</em></p>
-                <ul>
-                    <li>Implantação da plataforma Ellevo Next para clientes enterprise.</li>
-                    <li>Automação com PowerShell e APIs REST.</li>
-                    <li>Atuação consultiva em ITSM e governança.</li>
-                </ul>
-                <div class="exp-results"><strong>Impacto:</strong> Promoção em 2 meses e redução de 40% no tempo de implantação.</div>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-role">Master Network Technician</div>
-                <div class="exp-company">RR64 – Network Intelligence</div>
-                <p><em>2023 – 2025</em></p>
-                <ul>
-                    <li>Backbone, redes corporativas e alta disponibilidade.</li>
-                    <li>Troubleshooting avançado e SLA.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-role">Analista NOC N1 / N2</div>
-                <div class="exp-company">MetroNetwork</div>
-                <p><em>2022 – 2023</em></p>
-                <ul>
-                    <li>Monitoramento com Zabbix, Grafana e LibreNMS.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-role">Técnico de Redes</div>
-                <div class="exp-company">Operadora Vetorial</div>
-                <p><em>2019 – 2020</em></p>
-                <ul>
-                    <li>Redes corporativas e infraestrutura.</li>
-                </ul>
             </div>
         </section>
 
@@ -291,5 +227,33 @@
     </div>
 
 </div>
+
+<script>
+new Chart(document.getElementById('skillsChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Redes', 'Monitoramento', 'Automação', 'ITSM', 'Segurança'],
+        datasets: [{
+            data: [90, 95, 85, 80, 75]
+        }]
+    },
+    options: {
+        plugins:{legend:{display:false}},
+        scales:{y:{beginAtZero:true,max:100}}
+    }
+});
+
+new Chart(document.getElementById('experienceChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['NOC', 'Implantação', 'Automação', 'Redes'],
+        datasets: [{
+            data: [30, 25, 20, 25]
+        }]
+    },
+    options:{plugins:{legend:{position:'bottom'}}}
+});
+</script>
+
 </body>
 </html>
