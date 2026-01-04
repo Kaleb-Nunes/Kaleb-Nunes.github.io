@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaleb Nunes dos Santos | CV & Portfólio Profissional</title>
+<title>Kaleb Nunes dos Santos | CV Profissional</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -20,11 +20,12 @@ color:#1f2937;
 padding-top:90px
 }
 
+/* NAVBAR */
 .navbar{
 position:fixed;
 top:0;
 width:100%;
-background:#fff;
+background:#ffffff;
 display:flex;
 justify-content:center;
 gap:32px;
@@ -37,10 +38,8 @@ text-decoration:none;
 font-weight:600;
 color:#1e3a8a
 }
-.navbar a:hover{
-text-decoration:underline
-}
 
+/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
@@ -48,6 +47,7 @@ background:#fff;
 box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 
+/* HEADER / DASHBOARD */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;
@@ -58,17 +58,13 @@ display:flex;
 gap:40px;
 align-items:center
 }
-
 .photo{
 width:180px;
 height:180px;
 border-radius:50%;
 border:6px solid rgba(255,255,255,.95);
 object-fit:cover;
-object-position:center;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-flex-shrink:0;
-background:#fff
+box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
 .btn-download{
@@ -81,18 +77,32 @@ padding:14px 30px;
 border-radius:30px;
 font-weight:700;
 text-decoration:none;
-margin-top:20px;
-transition:.3s
-}
-.btn-download:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(255,255,255,.35)
+margin-top:20px
 }
 
+/* DASHBOARD KPIs */
+.dashboard-metrics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:35px
+}
+.metric{
+background:rgba(255,255,255,.15);
+padding:22px;
+border-radius:14px;
+text-align:center
+}
+.metric span{
+font-size:2em;
+font-weight:800;
+display:block
+}
+
+/* SECTIONS */
 .section{
-padding:60px 50px
+padding:70px 55px
 }
-
 .section-title{
 font-size:1.6em;
 font-weight:700;
@@ -100,31 +110,12 @@ color:#1e3a8a;
 margin-bottom:30px
 }
 
-/* INDICADORES */
-.metrics{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px
-}
-.metric-box{
-background:#f8fafc;
-padding:28px;
-border-radius:14px;
-text-align:center;
-box-shadow:0 0 0 1px #e5e7eb
-}
-.metric-box span{
-font-size:2.3em;
-font-weight:800;
-color:#1e3a8a
-}
-
-/* LISTAS */
 ul{
 padding-left:20px;
 line-height:1.8
 }
 
+/* FOOTER */
 .footer{
 text-align:center;
 padding:40px;
@@ -133,17 +124,8 @@ color:#6b7280
 }
 
 @media(max-width:768px){
-.header-content{
-flex-direction:column;
-text-align:center
-}
-.photo{
-width:160px;
-height:160px
-}
-.section{
-padding:50px 25px
-}
+.header-content{flex-direction:column;text-align:center}
+.section{padding:55px 25px}
 }
 </style>
 </head>
@@ -160,7 +142,7 @@ padding:50px 25px
 
 <div class="container">
 
-<!-- HEADER -->
+<!-- DASHBOARD / VISÃO EXECUTIVA -->
 <header class="header">
 <div class="header-content">
 
@@ -168,7 +150,12 @@ padding:50px 25px
 
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
-<h2>Consultor de Implantação | Redes, Automação e Observabilidade</h2>
+<h2>Consultor de Implantação | Automação, Redes e Observabilidade</h2>
+
+<p style="margin-top:15px;max-width:520px">
+Especialista em implantação de plataformas enterprise, automação de processos,
+monitoramento NOC e integração de sistemas críticos.
+</p>
 
 <a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download CV
@@ -176,41 +163,54 @@ padding:50px 25px
 </div>
 
 </div>
+
+<!-- DASHBOARD KPIs -->
+<div class="dashboard-metrics">
+<div class="metric"><span>6+</span>Anos de experiência</div>
+<div class="metric"><span>40%</span>Redução de tempo em implantações</div>
+<div class="metric"><span>Enterprise</span>Clientes de grande porte</div>
+<div class="metric"><span>2 meses</span>Promoção técnica</div>
+</div>
 </header>
 
-<!-- PERFIL -->
+<!-- PERFIL DETALHADO -->
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
 <p>
-Profissional com sólida atuação em ambientes enterprise, especializado em implantação de plataformas ITSM,
-automação de processos, observabilidade, monitoramento NOC e governança operacional.
+Profissional com sólida experiência em ambientes corporativos e enterprise,
+atuando com implantação de plataformas ITSM, automação de fluxos operacionais,
+observabilidade de infraestrutura e governança de serviços de TI.
+</p>
+<p style="margin-top:15px">
+Experiência prática com integração via APIs REST, PowerShell, monitoramento
+(Zabbix, Grafana), suporte a ambientes críticos e atuação direta com clientes
+de grande porte (bancos, indústria e varejo).
 </p>
 </section>
 
-<!-- PROJETOS -->
+<!-- PROJETOS DETALHADOS -->
 <section id="projetos" class="section">
-<h2 class="section-title">Projetos de Implantação (Resumo Executivo)</h2>
+<h2 class="section-title">Projetos de Implantação</h2>
 <ul>
-<li>Implantação completa de plataforma ITSM (Ellevo Next), incluindo catálogo de serviços, SLAs e workflows</li>
-<li>Automação de setup e integrações via PowerShell e APIs REST</li>
-<li>Monitoramento e observabilidade com Zabbix, Grafana e dashboards executivos</li>
-<li>Projetos conduzidos seguindo boas práticas de segurança da informação e LGPD</li>
+<li>Implantação completa da plataforma Ellevo Next (ITSM)</li>
+<li>Automação de provisionamento e integrações via PowerShell</li>
+<li>Criação de dashboards executivos em Grafana</li>
+<li>Integração com ambientes corporativos seguindo LGPD</li>
 </ul>
 </section>
 
-<!-- INDICADORES -->
+<!-- INDICADORES DETALHADOS -->
 <section id="indicadores" class="section">
 <h2 class="section-title">Indicadores Profissionais</h2>
-
-<div class="metrics">
-<div class="metric-box"><span>40%</span><br>Redução no tempo de implantação</div>
-<div class="metric-box"><span>6+</span><br>Anos de experiência</div>
-<div class="metric-box"><span>Enterprise</span><br>Clientes de grande porte</div>
-<div class="metric-box"><span>2 meses</span><br>Promoção técnica</div>
-</div>
+<ul>
+<li>Redução média de 40% no tempo de implantação de projetos</li>
+<li>Alta taxa de satisfação em ambientes enterprise</li>
+<li>Promoção técnica em curto período por performance</li>
+<li>Atuação em projetos críticos com SLA rigoroso</li>
+</ul>
 </section>
 
-<!-- EXPERIÊNCIA -->
+<!-- EXPERIÊNCIA DETALHADA -->
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
 <ul>
@@ -229,21 +229,17 @@ automação de processos, observabilidade, monitoramento NOC e governança opera
 </section>
 
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • CV & Portfólio Profissional
+© 2026 Kaleb Nunes dos Santos • CV Profissional
 </footer>
 
 </div>
 
 <script>
-/* CV POR IDIOMA */
-let cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profissional.pdf";
-if (location.pathname.includes("index-en")) {
-cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Professional_EN.pdf";
-}
-if (location.pathname.includes("index-es")) {
-cvFile = "Kaleb%20Nunes%20dos%20Santos%20_%20CV%20Profesional_ES.pdf";
-}
-document.getElementById("cvDownload").href = "/" + cvFile;
+/* CV por idioma */
+let cv = "assets/Kaleb-Nunes-CV.pdf";
+if(location.pathname.includes("index-en")) cv="assets/Kaleb-Nunes-CV-EN.pdf";
+if(location.pathname.includes("index-es")) cv="assets/Kaleb-Nunes-CV-ES.pdf";
+document.getElementById("cvDownload").href = cv;
 </script>
 
 </body>
