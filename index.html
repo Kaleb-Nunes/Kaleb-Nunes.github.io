@@ -134,6 +134,35 @@ body.dark .footer{background:#020617;color:#94a3b8}
 .navbar,.lang-switch,#darkToggle,.btn-download{display:none}
 body{background:#fff}
 }
+
+/* ========================= */
+/* MOBILE FIX - ICON OVERLAP */
+/* ========================= */
+@media (max-width: 768px){
+
+  .header-content{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .contact-info{
+    align-items:center;
+    text-align:center;
+  }
+
+  .contact-info a,
+  .contact-info span{
+    justify-content:center;
+    width:100%;
+    font-size:0.95rem;
+    line-height:1.6;
+  }
+
+  .contact-info i{
+    min-width:18px;
+    text-align:center;
+  }
+}
 </style>
 </head>
 
