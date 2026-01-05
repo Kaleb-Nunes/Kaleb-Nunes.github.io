@@ -22,6 +22,7 @@ transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
 
+/* NAVBAR */
 .navbar{
 position:fixed;top:0;width:100%;
 background:rgba(255,255,255,.95);
@@ -33,26 +34,48 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
+/* LANGUAGE SWITCH */
 .lang-switch{
 position:fixed;
-top:18px;
+top:16px;
 right:30px;
-font-weight:600;
 z-index:1000;
+background:#fff;
+border:2px solid #2563eb;
+border-radius:12px;
+padding:8px 14px;
 display:flex;
 align-items:center;
-gap:8px
+gap:14px;
+box-shadow:0 6px 20px rgba(0,0,0,.15)
+}
+body.dark .lang-switch{
+background:#020617;
+border-color:#60a5fa
 }
 .lang-switch a{
-color:#1e3a8a;
 text-decoration:none;
-display:inline-flex;
+font-weight:600;
+color:#374151;
+display:flex;
 align-items:center;
 gap:6px;
-font-size:.95em
+padding:4px 6px;
+border-bottom:2px solid transparent;
+transition:.2s
 }
-body.dark .lang-switch a{color:#93c5fd}
+body.dark .lang-switch a{color:#e5e7eb}
 
+.lang-switch a.active{
+color:#2563eb;
+border-bottom:2px solid #2563eb
+}
+body.dark .lang-switch a.active{
+color:#93c5fd;
+border-bottom-color:#93c5fd
+}
+
+/* DARK MODE BUTTON */
 #darkToggle{
 position:fixed;top:15px;left:30px;
 background:#1e3a8a;color:#fff;border:none;
@@ -60,12 +83,14 @@ padding:8px 14px;border-radius:20px;
 font-weight:600;cursor:pointer;z-index:1000
 }
 
+/* CONTAINER */
 .container{
 max-width:1100px;margin:auto;background:#fff;
 box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
 
+/* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
 color:#fff;padding:55px
@@ -77,6 +102,7 @@ border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
+/* BUTTON */
 .btn-download{
 display:inline-flex;align-items:center;gap:10px;
 background:#fff;color:#1e3a8a;
@@ -85,6 +111,7 @@ font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
 }
 .btn-download:hover{transform:translateY(-3px)}
 
+/* METRICS */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -96,6 +123,7 @@ padding:22px;border-radius:14px;text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
+/* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
 font-size:1.6em;font-weight:700;color:#1e3a8a;
@@ -104,6 +132,7 @@ margin-bottom:30px
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
+/* FOOTER */
 .footer{
 text-align:center;padding:40px;background:#f8fafc;color:#6b7280
 }
@@ -127,11 +156,11 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#experiencia">Experiência</a>
 </nav>
 
-<!-- Seletor de Idioma com Bandeiras -->
+<!-- LANGUAGE SWITCH -->
 <div class="lang-switch">
-<a href="index.html" title="Português (Brasil)">🇧🇷 PT</a> |
-<a href="index-en.html" title="English">🇺🇸 EN</a> |
-<a href="index-es.html" title="Español">🇪🇸 ES</a>
+<a href="index.html" data-lang="pt">🇧🇷 PT</a>
+<a href="index-en.html" data-lang="en">🇺🇸 EN</a>
+<a href="index-es.html" data-lang="es">🇪🇸 ES</a>
 </div>
 
 <div class="container">
@@ -165,44 +194,6 @@ monitoramento NOC e integração de sistemas críticos.
 </div>
 </header>
 
-<section id="perfil" class="section">
-<h2 class="section-title">Perfil Profissional</h2>
-<p>
-Profissional com sólida atuação em ambientes enterprise, projetos críticos e
-operações de alta disponibilidade, com foco em implantação, automação,
-observabilidade e governança de TI.
-</p>
-</section>
-
-<section id="projetos" class="section">
-<h2 class="section-title">Projetos de Implantação</h2>
-<ul>
-<li>Implantação de plataforma ITSM (Ellevo Next)</li>
-<li>Automação de fluxos via PowerShell e APIs REST</li>
-<li>Dashboards executivos e NOC com Grafana</li>
-<li>Projetos conduzidos conforme boas práticas e LGPD</li>
-</ul>
-</section>
-
-<section id="indicadores" class="section">
-<h2 class="section-title">Indicadores Profissionais</h2>
-<ul>
-<li>Redução média de 40% no tempo de implantação</li>
-<li>Padronização de processos e aumento da governança</li>
-<li>Atuação em ambientes regulados e críticos</li>
-</ul>
-</section>
-
-<section id="experiencia" class="section">
-<h2 class="section-title">Experiência Profissional</h2>
-<ul>
-<li><strong>Consultor de Implantação – Ellevo Software</strong> — Presencial • Cooperado</li>
-<li><strong>Analista de Infraestrutura – MJV (Projeto Bradesco)</strong> — Remoto • PJ</li>
-<li><strong>Analista de Redes / NOC – Vivatech Telecom</strong> — Remoto • PJ</li>
-<li><strong>Master Network Technician – RR64</strong> — Remoto • CLT</li>
-</ul>
-</section>
-
 <footer class="footer">
 © 2026 Kaleb Nunes dos Santos • CV Profissional
 </footer>
@@ -210,15 +201,28 @@ observabilidade e governança de TI.
 </div>
 
 <script>
+/* DARK MODE */
 const toggle=document.getElementById("darkToggle");
 toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
 
+/* LANGUAGE ACTIVE + CV DOWNLOAD */
+const path=location.pathname;
+
+let lang="pt";
+if(path.includes("index-en")) lang="en";
+if(path.includes("index-es")) lang="es";
+
+document.querySelectorAll(".lang-switch a").forEach(link=>{
+if(link.dataset.lang===lang) link.classList.add("active");
+});
+
 let cv="assets/Kaleb-Nunes-CV.pdf";
-if(location.pathname.includes("index-en")) cv="assets/Kaleb-Nunes-CV-EN.pdf";
-if(location.pathname.includes("index-es")) cv="assets/Kaleb-Nunes-CV-ES.pdf";
+if(lang==="en") cv="assets/Kaleb-Nunes-CV-EN.pdf";
+if(lang==="es") cv="assets/Kaleb-Nunes-CV-ES.pdf";
+
 document.getElementById("cvDownload").href=cv;
 </script>
 
