@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kaleb Nunes dos Santos | Consultor de Implementación</title>
-
-<meta name="description" content="Consultor de Implementación especializado en automatización, redes y observabilidad. Experiencia en entornos enterprise y proyectos críticos.">
-<meta name="author" content="Kaleb Nunes dos Santos">
-<meta name="robots" content="index, follow">
+<title>Kaleb Nunes dos Santos | Professional CV</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 
@@ -21,7 +17,7 @@ body{
 font-family:Inter,sans-serif;
 background:#eef2f7;
 color:#1f2937;
-padding-top:140px;
+padding-top:90px;
 transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
@@ -38,45 +34,45 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* LANGUAGE */
+/* LANGUAGE SWITCH */
 .lang-switch{
 position:fixed;
 top:16px;
-right:16px;
+right:30px;
 background:#fff;
 border:2px solid #2563eb;
-border-radius:14px;
-padding:6px 12px;
+border-radius:12px;
+padding:8px 14px;
 display:flex;
-gap:12px;
+align-items:center;
+gap:14px;
 z-index:1000
 }
 body.dark .lang-switch{background:#020617;border-color:#60a5fa}
-.lang-switch a{display:flex;gap:6px;font-weight:600;text-decoration:none;color:#1e3a8a}
-body.dark .lang-switch a{color:#93c5fd}
-.lang-switch img{width:22px;height:16px;border-radius:3px}
-.lang-switch a.active{border-bottom:2px solid #2563eb}
-
-/* DARK BUTTON */
-#darkToggle{
-position:fixed;
-top:16px;
-left:16px;
-background:#1e3a8a;
-color:#fff;
-border:none;
-padding:8px 14px;
-border-radius:20px;
+.lang-switch a{
+color:#1e3a8a;
+text-decoration:none;
 font-weight:600;
-cursor:pointer;
-z-index:1000
+display:flex;
+align-items:center;
+gap:6px;
+border-bottom:2px solid transparent
+}
+body.dark .lang-switch a{color:#93c5fd}
+.lang-switch a.active{border-bottom:2px solid #2563eb}
+.lang-switch img{width:22px;height:16px;border-radius:3px}
+
+/* DARK MODE */
+#darkToggle{
+position:fixed;top:15px;left:30px;
+background:#1e3a8a;color:#fff;border:none;
+padding:8px 14px;border-radius:20px;
+font-weight:600;cursor:pointer;z-index:1000
 }
 
 /* CONTAINER */
 .container{
-max-width:1100px;
-margin:auto;
-background:#fff;
+max-width:1100px;margin:auto;background:#fff;
 box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
@@ -84,115 +80,69 @@ body.dark .container{background:#020617}
 /* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;
-padding:55px
+color:#fff;padding:55px
 }
-.header-content{
-display:flex;
-gap:40px;
-align-items:center;
-flex-wrap:wrap
-}
+.header-content{display:flex;gap:40px;align-items:center}
 .photo{
-width:180px;
-height:180px;
-border-radius:50%;
-border:6px solid #fff;
-object-fit:cover
+width:180px;height:180px;border-radius:50%;
+border:6px solid rgba(255,255,255,.95);
+object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
-/* CONTACT */
+/* CONTACT INFO (FIX EN) */
 .contact-info{
-margin-top:16px;
+margin-top:14px;
 display:flex;
 flex-direction:column;
 gap:10px
 }
 .contact-info a,
 .contact-info span{
-color:#fff;
+color:#ffffff;
 text-decoration:none;
+font-size:15px;
 display:flex;
 align-items:center;
 gap:8px
 }
+.contact-info a:hover{text-decoration:underline}
+.contact-info i{font-size:16px}
 
 /* BUTTON */
 .btn-download{
-display:inline-flex;
-align-items:center;
-gap:10px;
-background:#fff;
-color:#1e3a8a;
-padding:14px 30px;
-border-radius:30px;
-font-weight:700;
-text-decoration:none;
-margin-top:20px
+display:inline-flex;align-items:center;gap:10px;
+background:#fff;color:#1e3a8a;
+padding:14px 30px;border-radius:30px;
+font-weight:700;text-decoration:none;margin-top:20px;transition:.3s
 }
+.btn-download:hover{transform:translateY(-3px)}
 
 /* METRICS */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:35px
+gap:20px;margin-top:35px
 }
 .metric{
 background:rgba(255,255,255,.15);
-padding:22px;
-border-radius:14px;
-text-align:center
+padding:22px;border-radius:14px;text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
 /* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
-font-size:1.6em;
-font-weight:700;
-color:#1e3a8a;
+font-size:1.6em;font-weight:700;color:#1e3a8a;
 margin-bottom:30px
 }
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
-/* REFERENCES */
-.references{
-display:grid;
-gap:20px
-}
-.reference-item{
-padding:18px;
-border-radius:10px;
-background:#f1f5f9;
-box-shadow:0 2px 6px rgba(0,0,0,.08)
-}
-body.dark .reference-item{background:#020617}
-.ref-name{font-weight:700}
-
 /* FOOTER */
 .footer{
-text-align:center;
-padding:40px;
-background:#f8fafc;
-color:#6b7280
+text-align:center;padding:40px;background:#f8fafc;color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
-
-/* MOBILE */
-@media (max-width:900px){
-body{padding-top:120px}
-.header{padding:40px 25px}
-.header-content{flex-direction:column;text-align:center}
-.photo{width:150px;height:150px}
-.contact-info{align-items:center}
-.dashboard-metrics{grid-template-columns:1fr}
-.navbar{flex-wrap:wrap;gap:14px}
-.lang-switch{top:65px;right:50%;transform:translateX(50%)}
-#darkToggle{top:65px;left:50%;transform:translateX(-50%)}
-.section{padding:50px 25px}
-}
 </style>
 </head>
 
@@ -201,114 +151,105 @@ body{padding-top:120px}
 <button id="darkToggle">🌙 Dark</button>
 
 <nav class="navbar">
-<a href="#perfil">Perfil</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#indicadores">Indicadores</a>
-<a href="#experiencia">Experiencia</a>
-<a href="#referencias">Referencias</a>
+<a href="#profile">Profile</a>
+<a href="#projects">Projects</a>
+<a href="#indicators">Indicators</a>
+<a href="#experience">Experience</a>
 </nav>
 
 <div class="lang-switch">
-<a href="index.html"><img src="https://flagcdn.com/w20/br.png">PT</a>
-<a href="index-en.html"><img src="https://flagcdn.com/w20/us.png">EN</a>
-<a href="index-es.html" class="active"><img src="https://flagcdn.com/w20/es.png">ES</a>
+<a href="index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
+<a href="index-en.html" class="active"><img src="https://flagcdn.com/w20/us.png"> EN</a>
+<a href="index-es.html"><img src="https://flagcdn.com/w20/es.png"> ES</a>
 </div>
 
 <div class="container">
 
 <header class="header">
 <div class="header-content">
-<img src="assets/Mídia%20(2).jpg" class="photo">
+
+<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
 
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
-<h2>Consultor de Implementación | Automatización, Redes y Observabilidad</h2>
+<h2>Implementation Consultant | Automation, Networks & Observability</h2>
 
 <div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-<a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
-<span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+<a href="https://wa.me/5547988901616" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a href="mailto:kalebdossantos59924@gmail.com">
+<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
+</a>
+<span>
+<i class="fas fa-location-dot"></i>
+Balneário Camboriú • SC • Brazil
+</span>
 </div>
 
 <a id="cvDownload" class="btn-download" target="_blank">
-<i class="fas fa-download"></i> Descargar CV
+<i class="fas fa-download"></i> Download CV
 </a>
 </div>
+
 </div>
 
 <div class="dashboard-metrics">
-<div class="metric"><span>6+</span>Años de experiencia</div>
-<div class="metric"><span>40%</span>Reducción del tiempo</div>
-<div class="metric"><span>Enterprise</span>Entornos críticos</div>
-<div class="metric"><span>Alta</span>Disponibilidad</div>
+<div class="metric"><span>6+</span>Years of experience</div>
+<div class="metric"><span>40%</span>Deployment time reduction</div>
+<div class="metric"><span>Enterprise</span>Critical environments</div>
+<div class="metric"><span>High</span>Operational reliability</div>
 </div>
 </header>
 
-<section id="perfil" class="section">
-<h2 class="section-title">Perfil Profesional</h2>
+<section id="profile" class="section">
+<h2 class="section-title">Professional Profile</h2>
 <p>
-Consultor de Implementación con sólida experiencia en entornos enterprise,
-enfocado en la implementación de soluciones tecnológicas, automatización
-de procesos, observabilidad e infraestructura de redes.
+Professional with solid experience in enterprise environments, critical projects,
+and high-availability operations, focused on implementation, automation,
+observability, and IT governance.
 </p>
 </section>
 
-<section id="proyectos" class="section">
-<h2 class="section-title">Proyectos y Soluciones</h2>
+<section id="projects" class="section">
+<h2 class="section-title">Implementation Projects</h2>
 <ul>
-<li>Implementación de plataformas ITSM y herramientas de gestión de servicios</li>
-<li>Automatización de procesos con PowerShell, scripts y APIs</li>
-<li>Creación de dashboards ejecutivos con Grafana</li>
-<li>Proyectos de observabilidad y monitoreo</li>
+<li>Implementation of ITSM platforms</li>
+<li>Process automation with PowerShell and APIs</li>
+<li>Executive dashboards with Grafana</li>
+<li>Observability and monitoring projects</li>
 </ul>
 </section>
 
-<section id="indicadores" class="section">
-<h2 class="section-title">Indicadores Profesionales</h2>
+<section id="indicators" class="section">
+<h2 class="section-title">Professional Indicators</h2>
 <ul>
-<li>Reducción promedio del 40% en el tiempo de implementación</li>
-<li>Mejora en la estabilidad de entornos críticos</li>
-<li>Estandarización de procesos técnicos</li>
-<li>Soporte estratégico a equipos técnicos y gerenciales</li>
+<li>40% average deployment time reduction</li>
+<li>Improved stability of critical environments</li>
+<li>Process standardization</li>
 </ul>
 </section>
 
-<section id="experiencia" class="section">
-<h2 class="section-title">Experiencia Profesional</h2>
+<section id="experience" class="section">
+<h2 class="section-title">Professional Experience</h2>
 <ul>
-<li><strong>Consultor de Implementación – Ellevo</strong></li>
-<li><strong>Analista de Infraestructura – MJV</strong></li>
-<li><strong>Analista de Redes – VivaTech</strong></li>
+<li><strong>Implementation Consultant – Ellevo</strong></li>
+<li><strong>Infrastructure Analyst – MJV</strong></li>
+<li><strong>Network Analyst – VivaTech</strong></li>
 </ul>
-</section>
-
-<section id="referencias" class="section">
-<h2 class="section-title">Referencias Profesionales</h2>
-<div class="references">
-<div class="reference-item">
-<div class="ref-name">Rôney Cordeiro</div>
-CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
-Teléfono: +1 (857) 204-7057<br>
-<em>Recomendación formal disponible | 2022–2025</em>
-</div>
-
-<div class="reference-item">
-<div class="ref-name">Lucas Costa</div>
-MetroNetwork<br>
-Teléfono: +55 47 9759-6283
-</div>
-</div>
 </section>
 
 <section class="section" style="text-align:center">
 <a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
-<i class="fas fa-file-signature"></i> Carta de Recomendación Técnica
+<i class="fas fa-file-signature"></i> Technical Recommendation Letter
 </a>
 </section>
 
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • CV Profesional
+© 2026 Kaleb Nunes dos Santos • Professional CV
 </footer>
 
 </div>
@@ -319,7 +260,7 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
-document.getElementById("cvDownload").href="assets/Kaleb Nunes dos Santos _ CV Profissional_2026.pdf";
+document.getElementById("cvDownload").href="assets/Kaleb Nunes dos Santos _ CV Profissional_2026-EN.pdf";
 </script>
 
 </body>
