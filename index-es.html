@@ -98,12 +98,12 @@ border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
-/* CONTACT INFO (✅ AQUI ESTAVA O ERRO) */
+/* CONTACT INFO — CORRIGIDO (IGUAL AO EN) */
 .contact-info{
 margin-top:18px;
 display:flex;
-flex-wrap:wrap;
-gap:18px;
+flex-direction:column;
+gap:10px;
 font-size:.95em
 }
 .contact-info a,
@@ -176,26 +176,17 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <header class="header">
 <div class="header-content">
 
-<img src="assets/Mídia%20(2).jpg" class="photo">
+<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
 
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
 <h2>Consultor de Implementación | Automatización, Redes y Observabilidad</h2>
 
 <div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
-<a href="https://wa.me/5547988901616" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-<a href="mailto:kalebdossantos59924@gmail.com">
-<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
-</a>
-<span>
-<i class="fas fa-location-dot"></i>
-Balneário Camboriú • SC • Brasil
-</span>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
+<span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
 </div>
 
 <a id="cvDownload" class="btn-download" target="_blank">
@@ -207,14 +198,49 @@ Balneário Camboriú • SC • Brasil
 
 <div class="dashboard-metrics">
 <div class="metric"><span>6+</span>Años de experiencia</div>
-<div class="metric"><span>40%</span>Reducción de tiempo</div>
+<div class="metric"><span>40%</span>Reducción en implementaciones</div>
 <div class="metric"><span>Enterprise</span>Entornos críticos</div>
-<div class="metric"><span>Alta</span>Disponibilidad</div>
+<div class="metric"><span>Alta</span>Confiabilidad operativa</div>
 </div>
 </header>
 
+<section id="perfil" class="section">
+<h2 class="section-title">Perfil Profesional</h2>
+<p>
+Profesional con sólida experiencia en entornos empresariales, proyectos críticos
+y operaciones de alta disponibilidad.
+</p>
+</section>
+
+<section id="proyectos" class="section">
+<h2 class="section-title">Proyectos de Implementación</h2>
+<ul>
+<li>Implementación de plataforma ITSM (Ellevo Next)</li>
+<li>Automatización con PowerShell y APIs REST</li>
+<li>Dashboards ejecutivos y NOC con Grafana</li>
+</ul>
+</section>
+
+<section id="indicadores" class="section">
+<h2 class="section-title">Indicadores Profesionales</h2>
+<ul>
+<li>Reducción promedio del 40%</li>
+<li>Estandarización de procesos</li>
+<li>Entornos regulados y críticos</li>
+</ul>
+</section>
+
+<section id="experiencia" class="section">
+<h2 class="section-title">Experiencia Profesional</h2>
+<ul>
+<li><strong>Consultor de Implementación – Ellevo</strong></li>
+<li><strong>Analista de Infraestructura – MJV</strong></li>
+<li><strong>Analista de Redes – Vivatech</strong></li>
+</ul>
+</section>
+
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos
+© 2026 Kaleb Nunes dos Santos • CV Profesional
 </footer>
 
 </div>
