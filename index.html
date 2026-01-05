@@ -6,14 +6,14 @@
 
 <title>Kaleb Nunes dos Santos | Consultor de Implantação</title>
 
-<meta name="description" content="Consultor de Implantação com experiência em automação, redes, observabilidade e ambientes enterprise.">
+<meta name="description" content="Consultor de Implantação especializado em automação, redes e observabilidade. Experiência em ambientes enterprise e projetos críticos.">
 <meta name="author" content="Kaleb Nunes dos Santos">
+<meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 
@@ -21,33 +21,68 @@ body{
 font-family:Inter,sans-serif;
 background:#eef2f7;
 color:#1f2937;
-padding-top:90px
+padding-top:140px;
+transition:.3s
 }
 body.dark{background:#020617;color:#e5e7eb}
 
 /* NAVBAR */
 .navbar{
-position:fixed;top:0;width:100%;
+position:fixed;
+top:70px;
+width:100%;
 background:rgba(255,255,255,.95);
 backdrop-filter:blur(10px);
-display:flex;justify-content:center;gap:32px;
-padding:16px;box-shadow:0 2px 20px rgba(0,0,0,.08);z-index:999
+display:flex;
+justify-content:center;
+gap:32px;
+padding:14px;
+box-shadow:0 2px 20px rgba(0,0,0,.08);
+z-index:900
 }
 body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* DARK MODE */
+/* LANGUAGE */
+.lang-switch{
+position:fixed;
+top:16px;
+right:16px;
+background:#fff;
+border:2px solid #2563eb;
+border-radius:14px;
+padding:6px 12px;
+display:flex;
+gap:12px;
+z-index:1000
+}
+body.dark .lang-switch{background:#020617;border-color:#60a5fa}
+.lang-switch a{display:flex;gap:6px;font-weight:600;text-decoration:none;color:#1e3a8a}
+body.dark .lang-switch a{color:#93c5fd}
+.lang-switch img{width:22px;height:16px;border-radius:3px}
+.lang-switch a.active{border-bottom:2px solid #2563eb}
+
+/* DARK BUTTON */
 #darkToggle{
-position:fixed;top:15px;left:30px;
-background:#1e3a8a;color:#fff;
-border:none;padding:8px 14px;border-radius:20px;
-font-weight:600;cursor:pointer;z-index:1000
+position:fixed;
+top:16px;
+left:16px;
+background:#1e3a8a;
+color:#fff;
+border:none;
+padding:8px 14px;
+border-radius:20px;
+font-weight:600;
+cursor:pointer;
+z-index:1000
 }
 
 /* CONTAINER */
 .container{
-max-width:1100px;margin:auto;background:#fff;
+max-width:1100px;
+margin:auto;
+background:#fff;
 box-shadow:0 10px 40px rgba(0,0,0,.1)
 }
 body.dark .container{background:#020617}
@@ -55,12 +90,21 @@ body.dark .container{background:#020617}
 /* HEADER */
 .header{
 background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-color:#fff;padding:55px
+color:#fff;
+padding:55px
 }
-.header-content{display:flex;gap:40px;align-items:center}
+.header-content{
+display:flex;
+gap:40px;
+align-items:center;
+flex-wrap:wrap
+}
 .photo{
-width:180px;height:180px;border-radius:50%;
-border:6px solid #fff;object-fit:cover
+width:180px;
+height:180px;
+border-radius:50%;
+border:6px solid #fff;
+object-fit:cover
 }
 
 /* CONTACT */
@@ -81,44 +125,71 @@ gap:8px
 
 /* BUTTON */
 .btn-download{
-display:inline-flex;align-items:center;gap:10px;
-background:#fff;color:#1e3a8a;
-padding:14px 30px;border-radius:30px;
-font-weight:700;text-decoration:none;margin-top:20px
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:#fff;
+color:#1e3a8a;
+padding:14px 30px;
+border-radius:30px;
+font-weight:700;
+text-decoration:none;
+margin-top:20px
 }
 
 /* METRICS */
 .dashboard-metrics{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;margin-top:35px
+gap:20px;
+margin-top:35px
 }
 .metric{
 background:rgba(255,255,255,.15);
-padding:22px;border-radius:14px;text-align:center
+padding:22px;
+border-radius:14px;
+text-align:center
 }
 .metric span{font-size:2em;font-weight:800;display:block}
 
 /* SECTIONS */
 .section{padding:70px 55px}
 .section-title{
-font-size:1.6em;font-weight:700;color:#1e3a8a;
-margin-bottom:20px
+font-size:1.6em;
+font-weight:700;
+color:#1e3a8a;
+margin-bottom:30px
 }
 body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
+/* REFERENCES */
+.references{
+display:grid;
+gap:20px
+}
+.reference-item{
+padding:18px;
+border-radius:10px;
+background:#f1f5f9;
+box-shadow:0 2px 6px rgba(0,0,0,.08)
+}
+body.dark .reference-item{background:#020617}
+.ref-name{font-weight:700}
+
 /* FOOTER */
 .footer{
-text-align:center;padding:40px;
-background:#f8fafc;color:#6b7280
+text-align:center;
+padding:40px;
+background:#f8fafc;
+color:#6b7280
 }
 body.dark .footer{background:#020617;color:#94a3b8}
 
 /* MOBILE */
 @media (max-width:768px){
-.header-content{flex-direction:column;text-align:center}
-.contact-info{align-items:center}
+.header-content{text-align:center;justify-content:center}
+.contact-info a,.contact-info span{justify-content:center}
 }
 </style>
 </head>
@@ -135,6 +206,12 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#referencias">Referências</a>
 </nav>
 
+<div class="lang-switch">
+<a href="index.html" class="active"><img src="https://flagcdn.com/w20/br.png">PT</a>
+<a href="index-en.html"><img src="https://flagcdn.com/w20/us.png">EN</a>
+<a href="index-es.html"><img src="https://flagcdn.com/w20/es.png">ES</a>
+</div>
+
 <div class="container">
 
 <header class="header">
@@ -148,11 +225,11 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <div class="contact-info">
 <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
 <a href="https://wa.me/5547988901616" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com</a>
 <span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
 </div>
 
-<a class="btn-download" href="assets/Kaleb-Nunes-CV.pdf" target="_blank">
+<a id="cvDownload" class="btn-download" target="_blank">
 <i class="fas fa-download"></i> Download CV
 </a>
 </div>
@@ -160,7 +237,7 @@ body.dark .footer{background:#020617;color:#94a3b8}
 
 <div class="dashboard-metrics">
 <div class="metric"><span>6+</span>Anos de experiência</div>
-<div class="metric"><span>40%</span>Redução de tempo</div>
+<div class="metric"><span>40%</span>Redução no tempo</div>
 <div class="metric"><span>Enterprise</span>Ambientes críticos</div>
 <div class="metric"><span>Alta</span>Disponibilidade</div>
 </div>
@@ -169,9 +246,7 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
 <p>
-Consultor de Implantação com sólida experiência em ambientes enterprise, atuando na implementação de soluções
-tecnológicas, automação de processos, observabilidade e infraestrutura de redes.
-Possui forte foco em eficiência operacional, padronização, estabilidade e melhoria contínua.
+Consultor de Implantação com sólida experiência em ambientes enterprise, atuando na implementação de soluções tecnológicas, automação de processos, observabilidade e infraestrutura de redes. Possui forte foco em eficiência operacional, padronização, estabilidade e melhoria contínua.
 </p>
 </section>
 
@@ -179,18 +254,18 @@ Possui forte foco em eficiência operacional, padronização, estabilidade e mel
 <h2 class="section-title">Projetos & Soluções</h2>
 <ul>
 <li>Implantação de plataformas ITSM e ferramentas de gestão de serviços</li>
-<li>Automação de processos com PowerShell, scripts e integrações via API</li>
-<li>Criação de dashboards executivos utilizando Grafana e ferramentas de monitoramento</li>
-<li>Projetos de observabilidade, monitoramento e análise de incidentes</li>
+<li>Automação de processos com PowerShell, scripts e APIs</li>
+<li>Criação de dashboards executivos com Grafana</li>
+<li>Projetos de observabilidade e monitoramento</li>
 </ul>
 </section>
 
 <section id="indicadores" class="section">
 <h2 class="section-title">Indicadores Profissionais</h2>
 <ul>
-<li>Redução média de 40% no tempo de implantação de soluções</li>
-<li>Melhoria na estabilidade e confiabilidade de ambientes críticos</li>
-<li>Padronização de processos técnicos e operacionais</li>
+<li>Redução média de 40% no tempo de implantação</li>
+<li>Melhoria na estabilidade de ambientes críticos</li>
+<li>Padronização de processos técnicos</li>
 <li>Suporte estratégico a times técnicos e gestores</li>
 </ul>
 </section>
@@ -198,28 +273,28 @@ Possui forte foco em eficiência operacional, padronização, estabilidade e mel
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
 <ul>
-<li><strong>Consultor de Implantação – Ellevo</strong><br>Atuação em projetos de implantação, automação e integração de sistemas.</li>
-<li><strong>Analista de Infraestrutura – MJV</strong><br>Suporte a ambientes corporativos e infraestrutura de TI.</li>
-<li><strong>Analista de Redes – VivaTech</strong><br>Gerenciamento de redes, suporte técnico e ambientes empresariais.</li>
+<li><strong>Consultor de Implantação – Ellevo</strong></li>
+<li><strong>Analista de Infraestrutura – MJV</strong></li>
+<li><strong>Analista de Redes – VivaTech</strong></li>
 </ul>
 </section>
 
 <section id="referencias" class="section">
 <h2 class="section-title">Referências Profissionais</h2>
-
-<div style="padding:14px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-bottom:20px">
-<strong>Rôney Cordeiro</strong><br>
+<div class="references">
+<div class="reference-item">
+<div class="ref-name">Rôney Cordeiro</div>
 CEO | VivaTech (CNPJ 33.692.990/0001-25)<br>
 Telefone: +1 (857) 204-7057<br>
-<em>Recomendação formal disponível | Período: 2022–2025</em>
+<em>Recomendação formal disponível | 2022–2025</em>
 </div>
 
-<div style="padding:14px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.08)">
-<strong>Lucas Costa</strong><br>
+<div class="reference-item">
+<div class="ref-name">Lucas Costa</div>
 MetroNetwork<br>
 Telefone: +55 47 9759-6283
 </div>
-
+</div>
 </section>
 
 <section class="section" style="text-align:center">
@@ -229,7 +304,7 @@ Telefone: +55 47 9759-6283
 </section>
 
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • Portfólio Profissional
+© 2026 Kaleb Nunes dos Santos • CV Profissional
 </footer>
 
 </div>
@@ -240,6 +315,7 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
+document.getElementById("cvDownload").href="assets/Kaleb-Nunes-CV.pdf";
 </script>
 
 </body>
