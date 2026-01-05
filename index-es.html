@@ -34,7 +34,7 @@ body.dark .navbar{background:#020617}
 .navbar a{text-decoration:none;font-weight:600;color:#1e3a8a}
 body.dark .navbar a{color:#93c5fd}
 
-/* LANGUAGE SWITCH – FLAGS */
+/* LANGUAGE SWITCH */
 .lang-switch{
 position:fixed;
 top:16px;
@@ -98,6 +98,24 @@ border:6px solid rgba(255,255,255,.95);
 object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)
 }
 
+/* CONTACT INFO (✅ AQUI ESTAVA O ERRO) */
+.contact-info{
+margin-top:18px;
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+font-size:.95em
+}
+.contact-info a,
+.contact-info span{
+color:#e0e7ff;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:8px
+}
+.contact-info a:hover{text-decoration:underline}
+
 /* BUTTON */
 .btn-download{
 display:inline-flex;align-items:center;gap:10px;
@@ -147,17 +165,10 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <a href="#experiencia">Experiencia</a>
 </nav>
 
-<!-- LANGUAGE SWITCH -->
 <div class="lang-switch">
-<a href="/index.html">
-<img src="https://flagcdn.com/w20/br.png" alt="Brasil"> PT
-</a>
-<a href="/index-en.html">
-<img src="https://flagcdn.com/w20/us.png" alt="USA"> EN
-</a>
-<a href="/index-es.html" class="active">
-<img src="https://flagcdn.com/w20/es.png" alt="España"> ES
-</a>
+<a href="/index.html"><img src="https://flagcdn.com/w20/br.png"> PT</a>
+<a href="/index-en.html"><img src="https://flagcdn.com/w20/us.png"> EN</a>
+<a href="/index-es.html" class="active"><img src="https://flagcdn.com/w20/es.png"> ES</a>
 </div>
 
 <div class="container">
@@ -165,29 +176,26 @@ body.dark .footer{background:#020617;color:#94a3b8}
 <header class="header">
 <div class="header-content">
 
-<img src="assets/Mídia%20(2).jpg" class="photo" alt="Kaleb Nunes dos Santos">
+<img src="assets/Mídia%20(2).jpg" class="photo">
 
 <div>
 <h1>KALEB NUNES DOS SANTOS</h1>
 <h2>Consultor de Implementación | Automatización, Redes y Observabilidad</h2>
 
 <div class="contact-info">
-  <a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-
-  <a href="https://wa.me/5547988901616" target="_blank">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
-
-  <a href="mailto:kalebdossantos59924@gmail.com">
-    <i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
-  </a>
-
-  <span>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+<a href="https://wa.me/5547988901616" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a href="mailto:kalebdossantos59924@gmail.com">
+<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
+</a>
+<span>
 <i class="fas fa-location-dot"></i>
 Balneário Camboriú • SC • Brasil
-  </span>
+</span>
 </div>
 
 <a id="cvDownload" class="btn-download" target="_blank">
@@ -199,58 +207,14 @@ Balneário Camboriú • SC • Brasil
 
 <div class="dashboard-metrics">
 <div class="metric"><span>6+</span>Años de experiencia</div>
-<div class="metric"><span>40%</span>Reducción en implementaciones</div>
+<div class="metric"><span>40%</span>Reducción de tiempo</div>
 <div class="metric"><span>Enterprise</span>Entornos críticos</div>
-<div class="metric"><span>Alta</span>Confiabilidad operativa</div>
+<div class="metric"><span>Alta</span>Disponibilidad</div>
 </div>
 </header>
 
-<section id="perfil" class="section">
-<h2 class="section-title">Perfil Profesional</h2>
-<p>
-Profesional con sólida experiencia en entornos empresariales, proyectos críticos
-y operaciones de alta disponibilidad, enfocado en implementación, automatización,
-observabilidad y gobernanza de TI.
-</p>
-</section>
-
-<section id="proyectos" class="section">
-<h2 class="section-title">Proyectos de Implementación</h2>
-<ul>
-<li>Implementación de plataforma ITSM (Ellevo Next)</li>
-<li>Automatización de flujos con PowerShell y APIs REST</li>
-<li>Dashboards ejecutivos y NOC con Grafana</li>
-<li>Proyectos ejecutados conforme a buenas prácticas y LGPD</li>
-</ul>
-</section>
-
-<section id="indicadores" class="section">
-<h2 class="section-title">Indicadores Profesionales</h2>
-<ul>
-<li>Reducción promedio del 40% en tiempos de implementación</li>
-<li>Estandarización de procesos y mejora de la gobernanza</li>
-<li>Experiencia en entornos regulados y críticos</li>
-</ul>
-</section>
-
-<section id="experiencia" class="section">
-<h2 class="section-title">Experiencia Profesional</h2>
-<ul>
-<li><strong>Consultor de Implementación – Ellevo Software</strong></li>
-<li><strong>Analista de Infraestructura / Proyectos – MJV (Bradesco)</strong></li>
-<li><strong>Analista de Redes / NOC – Vivatech Telecom</strong></li>
-<li><strong>Master Network Technician – RR64 Network Intelligence</strong></li>
-</ul>
-</section>
-
-<section class="section" style="text-align:center">
-<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
-<i class="fas fa-file-signature"></i> Carta de Recomendación Técnica
-</a>
-</section>
-
 <footer class="footer">
-© 2026 Kaleb Nunes dos Santos • CV Profesional
+© 2026 Kaleb Nunes dos Santos
 </footer>
 
 </div>
@@ -261,7 +225,6 @@ toggle.onclick=()=>{
 document.body.classList.toggle("dark");
 toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
 };
-
 document.getElementById("cvDownload").href="assets/Kaleb-Nunes-CV-ES.pdf";
 </script>
 
