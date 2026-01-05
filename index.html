@@ -10,18 +10,20 @@
 <meta name="author" content="Kaleb Nunes dos Santos">
 <meta name="robots" content="index, follow">
 
-<meta property="og:title" content="Kaleb Nunes dos Santos | Consultor de Implantação">
-<meta property="og:description" content="Automação, Redes e Observabilidade em ambientes enterprise e críticos.">
-<meta property="og:type" content="website">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Inter,sans-serif;background:#eef2f7;color:#1f2937;padding-top:90px}
+
+body{
+font-family:Inter,sans-serif;
+background:#eef2f7;
+color:#1f2937;
+padding-top:90px;
+transition:.3s
+}
 body.dark{background:#020617;color:#e5e7eb}
 
 /* NAVBAR */
@@ -43,19 +45,25 @@ background:#fff;border:2px solid #2563eb;
 border-radius:12px;padding:8px 14px;
 display:flex;gap:14px;z-index:1000
 }
+body.dark .lang-switch{background:#020617;border-color:#60a5fa}
 .lang-switch a{display:flex;gap:6px;font-weight:600;text-decoration:none;color:#1e3a8a}
+body.dark .lang-switch a{color:#93c5fd}
 .lang-switch img{width:22px;height:16px;border-radius:3px}
 .lang-switch a.active{border-bottom:2px solid #2563eb}
 
-/* DARK */
+/* DARK BUTTON */
 #darkToggle{
 position:fixed;top:15px;left:30px;
 background:#1e3a8a;color:#fff;
-border:none;padding:8px 14px;border-radius:20px;cursor:pointer
+border:none;padding:8px 14px;border-radius:20px;
+font-weight:600;cursor:pointer;z-index:1000
 }
 
 /* CONTAINER */
-.container{max-width:1100px;margin:auto;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.1)}
+.container{
+max-width:1100px;margin:auto;background:#fff;
+box-shadow:0 10px 40px rgba(0,0,0,.1)
+}
 body.dark .container{background:#020617}
 
 /* HEADER */
@@ -70,12 +78,24 @@ border:6px solid #fff;object-fit:cover
 }
 
 /* CONTACT */
-.contact-info{margin-top:16px;display:flex;flex-direction:column;gap:10px}
-.contact-info a,.contact-info span{color:#fff;text-decoration:none;display:flex;gap:8px}
+.contact-info{
+margin-top:16px;
+display:flex;
+flex-direction:column;
+gap:10px
+}
+.contact-info a,
+.contact-info span{
+color:#fff;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:8px
+}
 
 /* BUTTON */
 .btn-download{
-display:inline-flex;gap:10px;
+display:inline-flex;align-items:center;gap:10px;
 background:#fff;color:#1e3a8a;
 padding:14px 30px;border-radius:30px;
 font-weight:700;text-decoration:none;margin-top:20px
@@ -87,16 +107,33 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;margin-top:35px
 }
-.metric{background:rgba(255,255,255,.15);padding:22px;border-radius:14px;text-align:center}
+.metric{
+background:rgba(255,255,255,.15);
+padding:22px;border-radius:14px;text-align:center
+}
 .metric span{font-size:2em;font-weight:800;display:block}
 
 /* SECTIONS */
 .section{padding:70px 55px}
-.section-title{font-size:1.6em;font-weight:700;color:#1e3a8a;margin-bottom:30px}
+.section-title{
+font-size:1.6em;font-weight:700;color:#1e3a8a;
+margin-bottom:30px
+}
+body.dark .section-title{color:#93c5fd}
 ul{padding-left:20px;line-height:1.8}
 
 /* FOOTER */
-.footer{text-align:center;padding:40px;background:#f8fafc;color:#6b7280}
+.footer{
+text-align:center;padding:40px;
+background:#f8fafc;color:#6b7280
+}
+body.dark .footer{background:#020617;color:#94a3b8}
+
+/* PRINT */
+@media print{
+.navbar,.lang-switch,#darkToggle,.btn-download{display:none}
+body{background:#fff}
+}
 </style>
 </head>
 
@@ -128,44 +165,65 @@ ul{padding-left:20px;line-height:1.8}
 <h2>Consultor de Implantação | Automação, Redes e Observabilidade</h2>
 
 <div class="contact-info">
-<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-<a href="mailto:kalebdossantos59924@gmail.com"><i class="fas fa-envelope"></i> E-mail</a>
-<a href="tel:+5547988901616"><i class="fas fa-phone"></i> WhatsApp</a>
-<a href="https://www.instagram.com/kaleb_nunesdossantos" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-<a href="https://www.facebook.com/share/1DAz4CjVcL/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-<span><i class="fas fa-location-dot"></i> Balneário Camboriú • SC • Brasil</span>
+<a href="https://www.linkedin.com/in/kalebnunes/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="https://wa.me/5547988901616" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="mailto:kalebdossantos59924@gmail.com">
+<i class="fas fa-envelope"></i> kalebdossantos59924@gmail.com
+</a>
+
+<a href="https://www.instagram.com/kaleb_nunesdossantos" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://www.facebook.com/share/1DAz4CjVcL/" target="_blank">
+<i class="fab fa-facebook"></i> Facebook
+</a>
+
+<span>
+<i class="fas fa-location-dot"></i>
+Balneário Camboriú • SC • Brasil
+</span>
 </div>
 
-<a id="cvDownload" class="btn-download"><i class="fas fa-download"></i> Download CV</a>
+<a id="cvDownload" class="btn-download" target="_blank">
+<i class="fas fa-download"></i> Download CV
+</a>
 </div>
 </div>
 
 <div class="dashboard-metrics">
 <div class="metric"><span>6+</span>Anos de experiência</div>
-<div class="metric"><span>40%</span>Redução de tempo</div>
+<div class="metric"><span>40%</span>Redução no tempo</div>
 <div class="metric"><span>Enterprise</span>Ambientes críticos</div>
 <div class="metric"><span>Alta</span>Confiabilidade</div>
 </div>
 </header>
 
-<!-- PERFIL -->
 <section id="perfil" class="section">
 <h2 class="section-title">Perfil Profissional</h2>
-<p>Profissional com sólida experiência em ambientes enterprise, projetos críticos e operações de alta disponibilidade.</p>
+<p>
+Profissional com sólida atuação em ambientes enterprise, projetos críticos e
+operações de alta disponibilidade, com foco em implantação, automação,
+observabilidade e governança de TI.
+</p>
 </section>
 
-<!-- PROJETOS -->
 <section id="projetos" class="section">
 <h2 class="section-title">Projetos & Soluções</h2>
 <ul>
 <li>Implantação de plataformas ITSM (Ellevo Next)</li>
-<li>Automação de processos com PowerShell e APIs REST</li>
-<li>Dashboards NOC e executivos com Grafana</li>
+<li>Automação de processos via PowerShell e APIs REST</li>
+<li>Dashboards executivos e NOC com Grafana</li>
 <li>Projetos alinhados à LGPD e governança corporativa</li>
 </ul>
 </section>
 
-<!-- INDICADORES -->
 <section id="indicadores" class="section">
 <h2 class="section-title">Indicadores Profissionais</h2>
 <ul>
@@ -175,20 +233,20 @@ ul{padding-left:20px;line-height:1.8}
 </ul>
 </section>
 
-<!-- EXPERIÊNCIA -->
 <section id="experiencia" class="section">
 <h2 class="section-title">Experiência Profissional</h2>
 <ul>
 <li><strong>Consultor de Implantação – Ellevo Software</strong></li>
-<li><strong>Analista Infraestrutura – MJV (Bradesco)</strong></li>
-<li><strong>Analista NOC / Redes – Vivatech Telecom</strong></li>
-<li><strong>Master Network Technician – RR64</strong></li>
-<li><strong>Analista NOC – MetroNetwork</strong></li>
+<li><strong>Analista de Infraestrutura – MJV (Projeto Bradesco)</strong></li>
+<li><strong>Analista de Redes / NOC – Vivatech Telecom</strong></li>
+<li><strong>Master Network Technician – RR64 Network Intelligence</strong></li>
+<li><strong>Analista NOC N1/N2 – MetroNetwork</strong></li>
+<li><strong>Técnico de Redes – Operadora Vetorial</strong></li>
 </ul>
 </section>
 
 <section class="section" style="text-align:center">
-<a href="assets/carta-de-recomendacao-tecnica.png" class="btn-download">
+<a href="assets/carta-de-recomendacao-tecnica.png" target="_blank" class="btn-download">
 <i class="fas fa-file-signature"></i> Carta de Recomendação Técnica
 </a>
 </section>
@@ -200,8 +258,15 @@ ul{padding-left:20px;line-height:1.8}
 </div>
 
 <script>
+/* DARK MODE */
+const toggle=document.getElementById("darkToggle");
+toggle.onclick=()=>{
+document.body.classList.toggle("dark");
+toggle.innerText=document.body.classList.contains("dark")?"☀️ Light":"🌙 Dark";
+};
+
+/* CV */
 document.getElementById("cvDownload").href="assets/Kaleb-Nunes-CV.pdf";
-document.getElementById("darkToggle").onclick=()=>document.body.classList.toggle("dark");
 </script>
 
 </body>
